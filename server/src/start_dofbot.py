@@ -23,6 +23,9 @@ def start_dofbot(config: Config) -> None:
         subprocess.Popen([dofbot_path], shell=True)
         print(f"Dofbot.exe started successfully from {dofbot_path}")
 
+        # wait 5 seconds for the app to open
+        pag.sleep(5)
+
         connect_coodinate = config.dofbot_app_connect_button_coodinate
         pag.moveTo(connect_coodinate[0], connect_coodinate[1])
         pag.click()
@@ -36,12 +39,20 @@ def start_dofbot(config: Config) -> None:
         ip_input_coodinate = config.dofbot_app_ip_input_coodinate
         pag.moveTo(ip_input_coodinate[0], ip_input_coodinate[1])
         pag.click()
+        for _ in range(15):
+            pag.press('right')
+        for _ in range(15):
+            pag.press('backspace')
         pag.write(config.dofbot_ip, interval=0.1)
         print(f"Entered IP address: {config.dofbot_ip}")
 
         port_input_coodinate = config.dofbot_app_port_input_coodinate
         pag.moveTo(port_input_coodinate[0], port_input_coodinate[1])
         pag.click()
+        for _ in range(5):
+            pag.press('right')
+        for _ in range(5):
+            pag.press('backspace')
         pag.write(str(config.dofbot_port), interval=0.1)
         print(f"Entered port: {config.dofbot_port}")
 
