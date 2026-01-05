@@ -26,6 +26,7 @@ class DofBotController:
         global CURRENT_SERVO1, CURRENT_SERVO2, CURRENT_SERVO3, CURRENT_SERVO4, CURRENT_SERVO5, CURRENT_SERVO6
         if self.is_valid_coordinate(config.dofbot_app_servo1_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo1_scroll_coodinate[0], config.dofbot_app_servo1_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO1-90) * 125)
             CURRENT_SERVO1 = 90
         else:
@@ -34,6 +35,7 @@ class DofBotController:
 
         if self.is_valid_coordinate(config.dofbot_app_servo2_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo2_scroll_coodinate[0], config.dofbot_app_servo2_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO2-90) * 125)
             CURRENT_SERVO2 = 90
         else:
@@ -42,6 +44,7 @@ class DofBotController:
 
         if self.is_valid_coordinate(config.dofbot_app_servo3_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo3_scroll_coodinate[0], config.dofbot_app_servo3_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO3-90) * 125)
             CURRENT_SERVO3 = 90
         else:
@@ -50,6 +53,7 @@ class DofBotController:
 
         if self.is_valid_coordinate(config.dofbot_app_servo4_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo4_scroll_coodinate[0], config.dofbot_app_servo4_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO4-90) * 125)
             CURRENT_SERVO4 = 90
         else:
@@ -58,6 +62,7 @@ class DofBotController:
 
         if self.is_valid_coordinate(config.dofbot_app_servo5_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo5_scroll_coodinate[0], config.dofbot_app_servo5_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO5-90) * 125)
             CURRENT_SERVO5 = 90
         else:
@@ -66,6 +71,7 @@ class DofBotController:
 
         if self.is_valid_coordinate(config.dofbot_app_servo6_scroll_coodinate):
             pag.moveTo(config.dofbot_app_servo6_scroll_coodinate[0], config.dofbot_app_servo6_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO6-180) * 125)
             CURRENT_SERVO6 = 180
         else:
@@ -82,6 +88,7 @@ class DofBotController:
             print("Warning: Servo1 scroll coordinate is not set. Skipping servo1 control.")
         else:
             pag.moveTo(config.dofbot_app_servo1_scroll_coodinate[0], config.dofbot_app_servo1_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO1 - dofbot.servo1) * 125)
             CURRENT_SERVO1 = dofbot.servo1
         pag.sleep(0.1)
@@ -91,6 +98,7 @@ class DofBotController:
             print("Warning: Servo2 scroll coordinate is not set. Skipping servo2 control.")
         else:
             pag.moveTo(config.dofbot_app_servo2_scroll_coodinate[0], config.dofbot_app_servo2_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO2 - dofbot.servo2) * 125)
             CURRENT_SERVO2 = dofbot.servo2
         pag.sleep(0.1)
@@ -100,6 +108,7 @@ class DofBotController:
             print("Warning: Servo3 scroll coordinate is not set. Skipping servo3 control.")
         else:
             pag.moveTo(config.dofbot_app_servo3_scroll_coodinate[0], config.dofbot_app_servo3_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO3 - dofbot.servo3) * 125)
             CURRENT_SERVO3 = dofbot.servo3
         pag.sleep(0.1)
@@ -109,6 +118,7 @@ class DofBotController:
             print("Warning: Servo4 scroll coordinate is not set. Skipping servo4 control.")
         else:
             pag.moveTo(config.dofbot_app_servo4_scroll_coodinate[0], config.dofbot_app_servo4_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO4 - dofbot.servo4) * 125)
             CURRENT_SERVO4 = dofbot.servo4
         pag.sleep(0.1)
@@ -118,6 +128,7 @@ class DofBotController:
             print("Warning: Servo5 scroll coordinate is not set. Skipping servo5 control.")
         else:
             pag.moveTo(config.dofbot_app_servo5_scroll_coodinate[0], config.dofbot_app_servo5_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO5 - dofbot.servo5) * 125)
             CURRENT_SERVO5 = dofbot.servo5
         pag.sleep(0.1)
@@ -127,5 +138,6 @@ class DofBotController:
             print("Warning: Servo6 scroll coordinate is not set. Skipping servo6 control.")
         else:
             pag.moveTo(config.dofbot_app_servo6_scroll_coodinate[0], config.dofbot_app_servo6_scroll_coodinate[1])
+            pag.sleep(0.1)
             pag.scroll((CURRENT_SERVO6 - dofbot.servo6) * 125)
             CURRENT_SERVO6 = dofbot.servo6
